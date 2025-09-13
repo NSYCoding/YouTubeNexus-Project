@@ -17,9 +17,7 @@ const MODULE_NAME: string = "{EXPORTED_MODULE_NAME}";
 
 const ICON_PATH: string = undefined;
 
-export default class SampleProcess extends Process {
-
-
+export default class YouTube extends Process {
     private partition: string = `persist:${MODULE_ID}`;
 
     // This user agent should work on most websites.
@@ -39,47 +37,22 @@ export default class SampleProcess extends Process {
                 htmlPath: path.join(__dirname, "../renderer/index.html"),
             }
         });
-
         // Alternative method:
         // If you simply want to embed a website quickly but have no control over it,
         // uncomment this and remove the other super(...). You can also delete
         // the initialize() function, handleEvent() function, and the ../renderer folder
         // as they will be unused.
-
-        // super({
-        //     moduleID: MODULE_ID,
-        //     moduleName: MODULE_NAME,
-        //     paths: {
-        //         iconPath: ICON_PATH,
-        //         urlPath: "https://www.nexus-app.net/develop/"
-        //     },
-        //     httpOptions: {
-        //         userAgent: this.userAgent,
-        //         partition: this.partition
-        //     }
-        // });
-    }
-
-
-    public async initialize(): Promise<void> {
-        this.sendToRenderer("user-agent", {
-            userAgent: this.userAgent,
-            partition: this.partition,
+        super({
+            moduleID: MODULE_ID,
+            moduleName: MODULE_NAME,
+            paths: {
+                iconPath: ICON_PATH,
+                urlPath: "https://www.youtube.com"
+            },
+            httpOptions: {
+                userAgent: this.userAgent,
+                partition: this.partition
+            }
         });
     }
-
-
-    public async handleEvent(eventType: string, data: any[]): Promise<any> {
-        switch (eventType) {
-            case "init": { // This event is sent from the ../renderer/renderer.ts when the frontend is ready.
-                this.initialize();
-                break;
-            }
-            default: {
-                console.warn(`[${MODULE_NAME}] Uncaught message: ${eventType} | ${data}`);
-                break;
-            }
-        }
-    }
-
 }

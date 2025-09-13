@@ -1,10 +1,10 @@
 {
-    "name": "Sample Web Browser Module",
-    "id": "developer.Sample_Web_Module",
-    "author": "developer",
+    "name": "YouTube",
+    "id": "NSY.youtubeWebsite",
+    "author": "NSY",
     "version": "1.0.0",
-    "description": "A developer template to embed websites within Nexus.",
-    "platforms": ["win32", "linux", "darwin"],
+    "description": "The YouTube website embedded into Nexus",
+    "platforms": ["win32", "linux"],
     "link": "https://github.com/aarontburn/nexus-template-webpage",
     "build": {
         "build-version": 1,
