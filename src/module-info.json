@@ -11,7 +11,7 @@
     ],
     "link": "https://github.com/aarontburn/nexus-template-webpage",
     "build": {
-        "build-version": 3,
+        "build-version": 4,
         "excluded": [
             "electron.ts"
         ],

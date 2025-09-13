@@ -10,7 +10,7 @@ window.ipc.onProcessEvent((eventType: string, data: any[]) => {
             // Create the webview
             const { userAgent, partition } = data[0];
 
-            const url: string = "https://www.nexus-app.net/develop/";
+            const url: string = "https://www.youtube.com";
             const html: string = `
                 <webview 
                     allowpopups
