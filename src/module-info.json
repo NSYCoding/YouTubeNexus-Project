@@ -2,12 +2,16 @@
     "name": "YouTube",
     "id": "NSY.youtubeWebsite",
     "author": "NSY",
+    "author-id": "684fd894b2e21f06cdd3692b",
     "version": "1.0.0",
     "description": "The YouTube website embedded into Nexus",
-    "platforms": ["win32", "linux"],
+    "platforms": [
+        "win32",
+        "linux"
+    ],
     "link": "https://github.com/aarontburn/nexus-template-webpage",
     "build": {
-        "build-version": 1,
+        "build-version": 3,
         "excluded": [
             "electron.ts"
         ],
